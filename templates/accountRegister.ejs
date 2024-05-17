@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Create Account</title>
+</head>
+
+<body>
+    <div class = "container">
+	    <h1><u>Create your account!</u></h1>
+	<form method="post" action="/processRegistration">
+        <div class="inputClass">
+            <label for="name">Full name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="inputClass">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="inputClass">
+            <label for="password">Password:</label>
+            <div class="password-wrapper">
+                <input type="password" id="password" name="password" required>
+                <span class="password-toggle" onclick="togglePassword()">Show</span>
+            </div>
+        </div>
+
+        <div class="inputClass">
+            <label for="choices">Choose your favorite movie genre:</label>
+            <select id="choices" name="choices" required>
+                <option value="" disabled selected>Please select</option>
+                <option value="Action">Action</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Crime">Crime</option>
+                <option value="Drama">Drama</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Horror">Horror</option>
+                <option value="Mystery">Mystery</option>
+                <option value="Romance">Romance</option>
+                <option value="Science Fiction">Science Fiction</option>
+            </select>
+        </div>
+
+        <div class="inputClass">
+            <label for="gender">Gender:</label>
+            <input type="text" id="gender" name="gender">
+        </div>
+
+        <button type="submit" class="btn-primary">Submit Information</button> <br>
+    </form>
+
+        <div class="login-prompt">
+            <span>Already have an account?</span>
+            <a href="/" class="login-link"><u>Log in</u></a>
+        </div>
+
+
+    </div>
+
+    <script>
+		function togglePassword() {
+			const pwdInput = document.getElementById("password");
+			const pwdToggle = document.querySelector(".password-toggle");
+			if (pwdInput.type === "password") {
+				pwdInput.type = "text";
+				pwdToggle.textContent = "Hide";
+			} else {
+				pwdInput.type = "password";
+				pwdToggle.textContent = "Show";
+			}
+		}
+	</script>
+
+    
+</body>
+
+
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+body {
+    background-color: lightseagreen;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 21px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #007bff;
+    background: transparent;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.container {
+    background-color: white;
+    padding: 45px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(54, 54, 54);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 28px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.inputClass {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.inputClass label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.inputClass input, .inputClass select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px transparent;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: -15px;
+}
+
+.btn-primary:hover {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0056b3;
+}
+
+.home-link {
+    text-decoration: underline;
+    display: block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-prompt {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-link {
+    color: #007bff;
+    text-decoration: none;
+    margin-left: 5px;
+    font-weight: 600;
+}
+
+
+
+</style>
+
+
+
+</html>
