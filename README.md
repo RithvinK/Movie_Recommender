@@ -1,4 +1,4 @@
-# ReadMe for Project
+# CMSC335 Final Project
 
 **Submitted by:** Jongwook Lee (directory id: leejw25)
 
