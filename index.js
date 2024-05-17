@@ -38,7 +38,7 @@ require("dotenv").config({ path: path.resolve(__dirname, '.env') });
 
 
 
-let portNumber = process.argv[2]; 
+let portNumber = 4000; 
 app.listen(portNumber);
 console.log(`Web server is running at http://localhost:${portNumber}`);
 process.stdout.write("Type stop to shutdown the server: ");
