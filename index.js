@@ -8,7 +8,7 @@ const path = require("path");
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-require("dotenv").config({ path: path.resolve(__dirname, 'credentials/.env') });
+require("dotenv").config({ path: path.resolve(__dirname, '.env') });
 
 
 const databaseAndCollection = {db: process.env.MONGO_DB_NAME, collection:process.env.MONGO_COLLECTION};
