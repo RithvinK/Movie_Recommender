@@ -1,4 +1,3 @@
-
 //TMDB API CALL
 const apiKey = 'api_key=da2496338acfa21e1bd322de778f18f5';
 const apiURL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&'+apiKey;
